@@ -4,7 +4,7 @@
 
     <head>
         <title>
-            Research HTML_Second lesson_HomeWork
+            Research HTML_Second lesson
         </title>
         <meta charset="UTF-8">
     </head>
@@ -13,6 +13,111 @@
         <form action="#" method="POST" enctype="multipart/form-data">
             <fieldset>
                 <legend>Fieldset's name</legend>
+                
+                <label>Field oneline input: <input type="text"></label> <!--Привязка по вложенности (Nesting snap)-->
+                <label for="Text">Another oneline input field: </label> <!--Привязка по id + for (Binding by id + for)-->
+                <input type="text" id="Text"> 
+                <p>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email">
+                </p>
+                <p>
+                    <label>Password: <input type="password" placeholder="Input password" required></label>
+                    <label for="URL">URL: </label>
+                    <input type="url" id="URL">
+                    <label>Search: 
+                        <input type="search" value="Some text" minlength="5" maxlength="10">
+                    </label>
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>File load</legend>
+                <p>
+                    <input type="file">
+                    <input type="file" multiple accept="image/*" size="10"> <!--MIME type (ограничение по типу файлов. Можно отфильтровать по группе типов-->
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Number fields</legend>
+                <p>
+                    <input type="number" min="10" max="100" step="10">
+                    <input type="range" step="1" value="50" min="1" max="100">
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Checkboxes and radiobuttons</legend>
+                <p>
+                    <label>option.1 <input type="checkbox" name="answer[]" checked></label> <!-- [] - позволяет получить массив данных по ключу при получении на сервере-->
+                    <label>option.2 <input type="checkbox" name="answer[]"></label>
+                </p>
+                <p>
+                    <label>Var.1 <input type="radio" name="radio" checked></label>
+                    <label>Var.2 <input type="radio" name="radio"></label>
+                    <label>Var.2 <input type="radio" name="radio"></label>
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Date time</legend>
+                <p>
+                    <label>Time <input type="time"></label>
+                    <label>Date <input type="date"></label>
+                    <label>DateTime <input type="datetime-local"></label>
+                    <label>Month <input type="month"></label>
+                    <label>Week <input type="week"></label> 
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Палитра и скрытые (hidden)</legend>
+                <p>
+                    <label>Color <input type="color"></label>
+                    <label>Hidden <input type="hidden" name="HiddenData" value="info"></label>
+                </p>
+            </fieldset>
+            <fieldset> <!--Кнопки-->
+                <legend>Buttons</legend>
+                <p>
+                    <input type="submit" value="Send">
+                    <input type="reset" value="Сброс">
+                    <input type="button" value="Simple Button">
+                    <p>
+                        <input type="image" src="images.jpeg"> <!--Like submit, but image-->
+                    </p>
+                </p>
+            </fieldset>
+            <fieldset> <!--Кнопки (тэги)-->
+                <legend>Buttons (tag)</legend>
+                <p>
+                    <button type="submit">Submit button tag</button>
+                    <button type="reset">Reset button tag</button>
+                    <button type="button">Just button tag</button>
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Text area</legend>
+                <textarea rows="10" cols="30">Some Text</textarea>
+            </fieldset>
+            <fieldset> <!--Списки-->
+                <legend>Lists</legend>
+                <p>
+                    <select size="3" multiple>
+                        <option selected>1</option>
+                        <option disabled>2</option>
+                        <option>Tree</option>
+                        <option value="190121">4</option>
+                        <option>5</option>
+                    </select>
+                </p>
+                <p>
+                    <select multiple>
+                        <option selected>1</option>
+                        <option>2</option>
+                        <option>Tree</option>
+                        <option value="190121">4</option>
+                        <option>5</option>
+                    </select>
+                </p>
             </fieldset>
         </form>
     </body>
+
+</html>
