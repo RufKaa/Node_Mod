@@ -1,0 +1,146 @@
+@import url("./grid.css");
+
+body {
+    margin: 0;
+}
+
+main div {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.slider {
+    padding: 0;
+    margin: 0 0 30px;
+    list-style-type: none;
+}
+
+.slider > li {
+    display: none;
+}
+
+.slider > li.active {
+    display: block;
+}
+
+.border {
+    border: 1px solid black;
+}
+
+.margin-bottom {
+    margin-bottom: 30px;
+}
+
+.margin-left {
+    margin-left: 10px;
+}
+
+.margin-rigth {
+    margin-right: 10px;
+}
+
+.card {
+    margin: 5px;
+    width: calc(100% - 10px);
+    height: calc(25vw - 10px); /* vw - 1% от ширины видимого окна браузера */
+    background-color: rgba(200, 200, 10, 0.58);
+    overflow: visible; /* Переполнение. по-уолчанию */
+    overflow: hidden;
+    overflow: scroll;
+    overflow: auto;
+    word-break: normal; /* по умолчанию */
+    word-break: break-all; /* чтобы поместилось в любом случае (перенос) */
+}
+
+.container {
+    box-shadow: 0 0 5px;
+}
+
+.font {
+    font-size: 50px;
+}
+
+li.hover:hover {
+    font-size: 20px;
+    font-size: 2em; /* относительно родительского элемента. font-size parent * 2 */
+    font-size: 2rem; /* относительно корневого элемента. font-size root * 2 */
+    font-size: 250%; /* процент от значения родителя. 2.5em */
+}
+
+/*
+li {
+    font-size: 2rem;
+    margin: 1em; /* отступ относительно
+} */
+
+.margin-left {
+    margin-left: 10%; /* 10% от доступной ширины элементы */
+}
+
+.height {
+    line-height: 1.5;
+    height: calc(3 * 1em * 1.5 + 2.5em + 32px); /* 3 элемента не активны (1em) * 1.5 (line-height) + 1 активный (2.5em) + 32 (16*2 отступы сверху и снизу)  */
+}
+
+img {
+    max-width: 100%;
+}
+
+.slider img {
+    width: 600px;
+    max-width: 100%;
+    height: auto;
+}
+
+/*
+@media Условие {
+    Селектор {
+        свойство: значение;
+    }
+}
+
+Условие
+-типы носителей (all, screen, print)
+-логические операторы (and, not, only)
+-медиа-функции (max-width, max-height, orientation(landscape, portrait e.t.c)
+*/
+
+@media screen and (max-width:480px){
+    .slider{
+        display: none;
+    }
+    .col-xs-12{
+        width: 100%;
+    }
+}
+
+ul {
+    list-style-type: none;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+@media screen and (min-width:481px) and (max-width:768px) {
+    .slider{
+        display: none;
+    }
+    .col-md-6{
+        width: 50%;
+    }   
+}
+
+@media screen and (min-width:769px) and (max-width:1024px){
+    .col-bg-4{
+        width: 33%;
+    }
+    .cards > div:last-child{
+        display: none;
+    }
+}
