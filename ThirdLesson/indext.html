@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <!--Приоритет по стиляем определяется так: 1. Атрибут. 2 Тег. 3. Линк-->
+    <head>
+        <title>Reseach CSS</title>
+        <meta charset="UTF-8">
+        <style>
+            h2 {
+                color: blue
+            }
+            h4 {
+                color: aqua
+            }
+        </style>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <h1 style="color: red;">Встраиваемая (embed)</h1>
+        <h2>Вложение стилей</h2>
+        <h3>связывание (link)</h3>
+        <h4 style="color: blueviolet">Some text</h4>
+
+        <p class="center-text">Class center text</p>
+        
+        <div id="container">
+        </div>
+        <div>Block text</div>
+        <p>
+            <em>Child selector</em>
+        </p>
+        <div>
+            <p>
+                <em>Div - p - em</em>
+            </p>
+        </div> 
+
+        <em>Just em</em>
+
+        <div>
+            <p>
+            <span class="red">
+                <a href="#">p - span .red - a</a>    
+            </span>
+            </p>
+        </div>
+
+        <nav>
+            <ul>
+                <li>Option 1</li>
+                <li>Option 2</li>
+                <li>Option 3</li>
+            </ul>
+        </nav>
+
+        <p> Text <b>SOme b text</b> continue p text <i>Some I text</i> and again p text</p>
+        <p id="newid"> Text p text <i>Some I text</i> and again p text</p>
+
+        <p id="elem" class="elem-class" disabled>
+            демонстрация специфичности
+        </p>
+    </body>
+</html>

@@ -1,0 +1,151 @@
+body {
+    margin: 0px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 
+        "header header header"
+        "slider slider slider"
+        "vertical-nav main news"
+        "footer footer footer";
+    grid-template-columns: 1fr minmax(auto, 960px) 1fr;
+    grid-template-rows: 60px auto 1fr 60px;
+    grid-gap: 5px;
+}
+
+header {
+    grid-area: header;
+}
+
+#slider {
+    grid-area: slider;
+}
+
+#vertical_menu {
+    grid-area: vertical-nav;
+}
+
+main {
+    grid-area: main;
+}
+
+#news {
+    grid-area: news;
+}
+
+footer {
+    grid-area: footer;
+}
+
+header, #slider, #vertical_menu, main, #news, footer {
+    background-color: darkgray;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+header {
+    display: grid;
+    background-color: black;
+    color: azure;
+    grid-template-columns: 1fr 7fr 1fr;
+    position: fixed;
+    top: 0px;
+    height: 60px;
+    z-index: 2;
+}
+
+header ul {
+    padding: 0px;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    font-size: 1.3em;
+}
+
+header li {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+header li:hover{
+    background-color: crimson;
+}
+
+header a {
+    color: aliceblue;
+    text-transform: uppercase;
+    text-decoration-line: none;
+}
+
+header form {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 5px;
+    align-items: baseline;
+    margin: 0px;
+}
+
+#logo {
+    background-image: url(../img/logo.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#slider li {
+    display: none;
+}
+
+#slider li.active {
+    display: block;
+}
+
+.goods {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+    border: 1px solid black;
+    justify-items: center;
+}
+
+.goods img {
+    width: 150px;
+    border: 1px solid black;
+}
+
+.goods h1 {
+    text-align: center;
+    font-size: 1.5em;
+    grid-row: 1 / 4;
+    grid-column: 1 / 4;
+}
+
+.articles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+    border: 1px solid black;
+    justify-items: center;
+}
+
+.articles h1 {
+    text-align: center;
+    font-size: 1.5em;
+    grid-row: 1 / 2; /*Занимаемый размер элемента (с первой по второю строки)*/
+    grid-column: 1 / 3;
+}
+
+.articles img {
+    width: 150px;
+    border: 1px solid black;
+}

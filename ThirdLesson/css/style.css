@@ -1,0 +1,96 @@
+/* 
+импорт файлов только в начале файла 
+*/
+@import url("style2.css"); 
+
+/* Селектор тега */
+h3 {
+    color: green;
+}
+
+/* Селектор класса */
+.center-text {
+    text-align: center;
+}
+
+/* селектор идентификатора */
+#container {
+    height: 100px;
+    width: 100px;
+    background: yellow;
+}
+
+/* дочерний селектор 
+родитель > ребенок {} */
+p > em {
+    font-size: 30pt;
+}
+
+/* Selector потомка (уровень вложенности не важен) 
+родитель потомок {} */
+div em {
+    color: orange
+}
+
+/* можно комбинировать селеторы потомков. Например тег-класс-тег 
+0 0 1 2 = 12 */ 
+p .red a {
+    text-decoration: none;
+}
+/* 0 0 1 1 = 11 */
+.red a {
+    text-decoration: line-through;
+}
+
+/* Селекторы можно перечислять через запятую */ 
+h1, h2, h3 {
+    background-color: burlywood 
+}
+
+nav li {
+    list-style-type: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Соседский селектор */
+b + i {
+    color: brown;
+}
+
+/* Родственный селектор (как соседский, но не обязательно прямо друг за другом) */
+h1 ~ p {
+    color: chartreuse;
+}
+
+/* Универсальный селектор (ко всем элементам) 
+* {
+    color: darkgreen;
+} */
+
+/* селектор аттрибута */
+[id] {
+    background-color: azure;
+}
+[id="newid"] {
+    background-color: dimgray;
+}
+
+/* специфичность имеет определенный приоритет. 0 0 0 1 = 1 */
+P {
+    background-color: green;
+}
+/* 0 1 0 0 = 100 */
+#elem {
+    background-color: yellow;
+}
+/* 0 0 1 0 = 10 */
+.elem-class {
+    background-color: blue;
+}
+
+/* 1 0 0 0 - этот приоритет специфичности имеет аттрибут style у тегов */
+
+/* 0 0 1 0 = 10 */
+[disabled] {
+    background-color: rgb(255, 30, 30);
+}

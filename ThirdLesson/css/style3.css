@@ -1,0 +1,63 @@
+.div {
+    margin-top:    30px;
+    margin-right:  15px;
+    margin-bottom: 40px;
+    margin-left:   20px;
+    /* top-bottom and left-right*/
+    margin: 15px 30px;
+    /* top right-left bottom */
+    margin: 15px 30px 10px;
+    /* по часовой стрелке от top */
+    margin: 30px 15px 40px 20px;
+
+    width: 200px;
+
+    border: 1px double red;
+    border-radius: 10px;
+    border-top: 2px solid green;
+    border-right: 2px solid blue;
+    border-left: 4px solid;
+    border-bottom: 3px solid violet;
+
+    border-left-color: orange;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.p {
+    padding-top:    30px;
+    padding-right:  15px;
+    padding-bottom: 40px;
+    padding-left:   20px;
+    /* top-bottom and left-right*/
+    padding: 15px 30px;
+    /* top right-left bottom */
+    padding: 15px 30px 10px;
+    /* по часовой стрелке от top */
+    padding: 30px 15px 40px 20px;
+}
+
+.box {
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    /* box-sizing: border-box;  - определяется размер с учетом отступов (margin) и набивки (padding) */
+    box-sizing: content-box; /* без учета (уходят во внешний размер). Т.е. размер только контента */
+    display: inline-block;
+}
+
+.span {
+    height: 100px;
+    width: 50px;
+    border: 1px solid black;
+    display: inline-block; /* отображение элемента как блочно-строчный. Учтиывается размер и идут последовательно друг за другом */
+}
+
+nav ul11 {
+    padding-inline-start: 0px;
+}
+nav li {
+    display: inline-block;
+    list-style-type: none;
+
+}

@@ -1,0 +1,39 @@
+.hidden {
+    display: none;
+}
+
+.container {
+    height: 500px;
+    border: 1px solid black;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0px;
+    justify-content: space-evenly;
+}
+
+#about:target ~ .about,
+#product:target ~ .product, 
+#order:target ~ .order {
+    display: block;
+}
+
+.about {
+    background: #9aa3fa;
+}
+
+
+.product {
+    background: #45f3f3;
+}
+
+
+.order {
+    background: #afb4ff;
+}
+
+* {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}

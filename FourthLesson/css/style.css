@@ -1,0 +1,86 @@
+
+/* Visible */
+* {
+    border: 1px solid black;
+}
+
+.visible {
+    visibility: visible;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.display-none {
+    display: none;
+}
+
+/* Position */
+.static {
+    position: static;
+}
+
+.relative {
+    position: relative;
+    top: 10px;
+    left: 50px;
+}
+
+.absolute {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    /*bottom: 10px; Тянется в зависимости от установленных границ top left и тд
+    right: 10px;*/
+    background-color: blanchedalmond;
+    z-index: 2;
+}
+
+/*Позиционируется относительно видимой области браузера и фиксируется в этом месте*/
+.fixed {
+    position: fixed;
+    top: 10px; 
+    left: 10px;
+    z-index: 1; /* Уровень слоя */
+    background: green;
+}
+
+.margin-top {
+    margin-top: 20px;
+}
+
+/* Прилипает к границе на установленном отступе (top и т.д.) */
+.sticky {
+    position: sticky;
+    z-index: 3;
+    background: orange;
+    top: 30px;
+}
+
+/* плавающие элементы */
+.float {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+/* Клиринг (очистка float) */
+.clear {
+    clear: both;
+}
+
+.container {
+    background: orange;
+}
+/* Clearfix
+создаем псевдо элемент после элемента с классом контейнер и очищаем. Нужно для введения плавающих элемент внутрь блочного*/
+.container::after {
+    display: block;
+    content: " ";
+    visibility: hidden;
+    clear: both;
+    height: 0px;
+}

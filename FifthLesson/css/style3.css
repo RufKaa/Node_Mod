@@ -1,0 +1,53 @@
+.container {
+    height: 100px;
+    width: 100px;
+    background-color: green;
+}
+
+.container:hover {
+    background-color: blue;
+}
+
+/* позиционирование происходит по ссылке (url с #) */
+.container:target {
+    display: none;
+}
+
+a:hover{
+    background-color: olive;
+}
+
+a:visited {
+    color: aquamarine;
+}
+
+a:link {
+    color: brown;
+}
+
+a:active {
+    color: orange;
+}
+
+/* Отображение подменю */
+.submenu {
+    display: none;
+}
+
+li:hover > .submenu {
+    display: block;
+}
+
+.form {
+    display: none;
+}
+
+.form:target {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: orange;
+}

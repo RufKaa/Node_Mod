@@ -1,0 +1,62 @@
+.flex {
+    display: flex;
+    height: 100px;
+    /* выравнивание по горизонтали */
+    justify-content: flex-start; /* (по-умолчанию) по левому */
+    justify-content: flex-end;   /* по правому */
+    justify-content: center; /* по центру */
+    justify-content: space-around; /* одинаковые отступы */
+    justify-content: space-between; /* одинаковые, но без крайних отступов */ 
+
+}
+
+p {
+    background-color: blueviolet;
+}
+
+div {
+    background-color: whitesmoke;
+}
+
+.flex1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* по-умолчнию. Растягиваются по самому большому элементу */
+    align-items: flex-start; /* выравнивание по верхнему краю */
+    align-items: baseline; /* выравнивание по базовой линии */
+
+}
+
+.flex2 {
+    display: flex;
+    flex-direction: row; /* По-умолчанию. */
+    flex-direction: row-reverse; /* обратный порядок */
+    /* вертикаль */
+    flex-direction: column;
+    flex-direction: column-reverse;
+}
+
+.flex3 {
+    color: aqua;
+    display: flex;
+    flex-wrap: nowrap; /* без переноса */
+    width: 250px;
+    flex-wrap: wrap-reverse; /* перенос вверх, а не в низ*/
+}
+
+.flex4 {
+    background: antiquewhite;
+    display: flex;
+    width: 250px;
+    height: 500px;
+    flex-wrap: wrap;
+    /*по-умолчанию. Растягиваются по вертикале*/
+    align-content: stretch;
+    align-content: flex-start; /* Выравнивание по верхнему краю блока*/
+    align-content: flex-end; /* по нижнему краю */
+    align-content: center;
+    align-content: space-around; /* По ширине блока */
+    align-content: space-between;
+    align-content: space-evenly; /* это вертикальное выравнивание */
+    justify-content: space-evenly; /* это горизонтальное выравнивание */
+}
