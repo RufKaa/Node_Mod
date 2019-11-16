@@ -1,0 +1,103 @@
+button {
+    background: rgb(64, 191, 191);
+    border: 0;
+    color: white;
+    font-size: 16px;
+    padding: 5px 16px;
+    /*При такой записи будет происходить анимация для всех событий. Можно включить только на button:hover и будет лучше*/
+    /*transition-property: all;*/
+    transition-property: background-color, border-radius;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    transition: all 0.5s linear 0.1s;  /* Запись одной строкой */
+}
+
+button:hover {
+    background: rgb(191, 64, 64);
+    border-radius: 16px;
+    transition: all 0.5s linear 0.1s;  /* Запись одной строкой */
+}
+
+.rotate {
+    height: 200px;
+    width: 200px;
+    background: grey;
+    margin: 50px;
+    transform: rotate(30deg);
+    transform-origin: 0 0; /* top left */
+}
+
+.translate {
+    height: 200px;
+    width: 200px;
+    background: orangered;
+    margin: 50px;
+    /*transform: translate(40px, 20px);*/
+    transition: transform 0.5s linear;
+}
+
+.translate:hover {
+    transform: translate(40px, 20px);
+}
+
+.scale {
+    height: 200px;
+    width: 200px;
+    background: olive;
+    margin: 50px;
+    transform: scale(-0.8); /* отрицательные значения переворачивают изображения, но также увеличивают. Дроби уменьшают */
+}
+
+/* наклон */
+.skew {
+    height: 200px;
+    width: 200px;
+    background: orange;
+    margin: 50px;
+    transform: skew(20deg);
+}
+
+.transform-3d {
+    height: 200px;
+    width: 200px;
+    background: purple;
+    transform: perspective(400px) rotateY(30deg) rotateX(15deg);
+}
+
+.some-container {
+    perspective: 100px;
+    perspective-origin: 50% 50%; /* положение перспективы (по умолчанию в центре) */
+}
+
+.some-container > div {
+    color: aquamarine;
+    display: inline-block;
+    background-color: chocolate;
+    height: 200px;
+    width: 200px;
+    transform: rotateX(15deg);
+}
+
+.box {
+    height: 200px;
+    width: 200px;
+    background-color: bisque;
+    animation: over-and-back 1.5s linear infinite; /* последний параметр - количество повторений */
+}
+
+@keyframes over-and-back {
+    0% {
+        background-color: rgb(191, 64, 64);
+        transform: translate(0,0) scale(1) rotateX(0);
+    }
+    33% {
+        transform: translate(50px, -30px) scale(0.8) rotateX(30deg);
+    }
+    66% {
+        transform: translate(100px,-15px) scale(1) rotateX(60deg);
+    }
+    100% {
+        background-color: rgb(128, 50, 190);
+        transform: translate(0,0) scale(1) rotateX(0);
+    }
+}

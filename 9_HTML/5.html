@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+        
+            body {
+                margin: 0;
+            }
+            
+            .site-header {
+                width: 100%;
+                height: 30px;
+                display: flex;
+                position: fixed;
+                top: 0;
+                z-index: 1;
+            }
+            
+            .test {
+                height: 90vh;
+                transition: width 1s linear;
+                /*width: 100%;
+                transition: transform 1s linear;
+                transform-origin: left;*/
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            
+            .red {
+                background-color: red;
+                /*transform: scaleX(1);*/
+                width: 100%;
+            }
+            
+            .green {
+                background-color: green;
+                /*transform: scaleX(0);*/
+                width: 0;
+            }
+            
+            #slider {
+                height: 90vh;
+                width: 100%;
+            }
+            
+            #slider:target > .red {
+                /*transform: scaleX(0);*/
+                width: 0;
+            }
+            
+            #slider:target > .green {
+                /*transform: scaleX(1);*/
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <header class="site-header">
+            <a href="#slider">start</a><a href="#">back</a>
+        </header>
+        <section id="slider" class="test-section">
+            <div class="test red">            
+            </div>
+            <div class="test green">
+            </div>            
+        </section>
+        <main>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae lorem interdum, pellentesque orci in, dignissim neque. Suspendisse dictum nisl varius massa porta consectetur eu vel est. Maecenas ac commodo turpis. Mauris ultrices diam et bibendum dapibus. Phasellus scelerisque urna vitae commodo suscipit. Aenean posuere, massa ut iaculis porta, velit velit efficitur sem, in euismod odio lorem eu lacus. Nam tristique quam ac finibus porta. Proin molestie enim neque, nec sollicitudin justo feugiat quis. Quisque id nulla leo. Phasellus aliquet massa nec gravida cursus.
+<br>
+In fringilla dictum augue, vitae finibus libero tristique sit amet. Maecenas rhoncus ligula pellentesque sapien facilisis, id varius quam mollis. Vivamus nulla ex, egestas non ex viverra, placerat efficitur lorem. Donec ante neque, condimentum et purus in, posuere consectetur felis. Pellentesque lacinia non mi id eleifend. Aliquam volutpat vestibulum luctus. Mauris velit est, ultricies id lacus ornare, venenatis malesuada augue. Donec efficitur, erat a ultricies vehicula, ipsum ipsum accumsan ante, et scelerisque dui sapien fringilla diam. Mauris ut sem erat. Nulla sapien nulla, ultrices at nibh eu, venenatis viverra sem. Etiam nec dapibus mi, eget mattis erat. Nullam scelerisque ut sem eu pellentesque.
+<br>
+Cras sodales odio ac tortor sagittis fringilla. Sed nunc turpis, laoreet et libero quis, congue pulvinar tortor. Fusce dignissim nisl purus, non tincidunt lacus dapibus non. Maecenas lacinia augue urna, quis hendrerit sapien tempor sed. Nullam convallis ullamcorper elementum. Ut porttitor dolor vitae sollicitudin dapibus. Nam tincidunt quam nibh, sed tristique est cursus nec. Duis non purus sit amet mauris ultricies dapibus sit amet sit amet dolor. Curabitur mauris arcu, sollicitudin et sollicitudin vitae, hendrerit sed orci. Suspendisse pulvinar sodales euismod. Nunc bibendum justo quis ultrices congue. Phasellus felis mauris, sollicitudin eget convallis et, condimentum eget lectus.
+<br>
+Aliquam blandit libero ligula, nec euismod nisl aliquam pellentesque. Donec mollis ut justo et dapibus. Donec ac lectus orci. Nam cursus lacinia auctor. Proin elementum maximus nunc, at malesuada nibh tempor in. Suspendisse nec massa in turpis aliquet vestibulum eget at elit. Nam porta justo nec mauris venenatis egestas. Curabitur ac leo et velit efficitur aliquet ac quis diam. Cras placerat dapibus est sed pharetra. Etiam vel est tincidunt, scelerisque justo ac, pharetra purus. Sed tincidunt ligula ac sem faucibus blandit. Nulla vulputate elementum mattis.
+<br>
+Donec eu dui neque. Etiam sit amet sollicitudin nisl, ac feugiat enim. Donec condimentum, augue non molestie placerat, est mauris ullamcorper est, et vestibulum leo nunc sit amet purus. Mauris et lacus mollis, lacinia nunc sit amet, gravida neque. Aliquam condimentum odio vel erat placerat maximus. Nulla facilisi. Vivamus dolor quam, pretium sed elit eget, sagittis semper enim. Nulla porta, libero pretium sollicitudin tempor, nisi purus venenatis sapien, vitae aliquam elit sapien sit amet dolor. Nunc ut consequat orci. Nulla facilisi. Vestibulum semper libero tellus, id placerat diam imperdiet semper. Praesent at imperdiet nisi, ut mollis enim.
+        </main>
+    </body>
+</html>

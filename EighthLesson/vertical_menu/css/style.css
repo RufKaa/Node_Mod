@@ -1,0 +1,113 @@
+.vertical-menu {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    line-height: 1.5;
+    box-sizing: border-box;
+}
+.vertical-menu__item {
+    flex: 0 0 10em; /* ширина блока 10*размер шрифта */
+    padding: 0.5em 1em; /* em - относительно шрифта */
+    color: rgb(163, 122g, 184);
+    background-color: white;
+    border: 1px solid rgb(26, 23, 28);
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    position: relative;
+    transition: background-color 0.2s linear;
+}
+
+.vertical-menu__item:hover {
+    background-color: rgb(243, 240, 244);
+}
+
+.vertical-menu__item:hover > .vertical-menu__drawer {
+    transform: opacity 0.5s linear, visibility 0s linear;
+    opacity: 1;
+    visibility: visible;
+}
+
+.vertical-menu__drawer {
+    box-sizing: border-box;
+    position: absolute;
+    background-color: white;
+    width: calc(10em - 2px);
+    visibility: hidden;
+    opacity: 0;
+    left: 0;
+    top: calc(1em + 1em * 1.5 + 1px); /* размер шрифта + размер паддингов (0.5 + 0.5) *1.5 (line-height) + 1px (верхний бордер) */
+    z-index: 1;
+}
+
+.submenu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.submenu__item + .submenu__item > .submenu__link {
+    border-top: 0;
+}
+
+.submenu__link {
+    display: block;
+    padding: 0.5em 1em;
+    color: rgb(167, 112, 197);
+    background-color: white;
+    text-decoration: none;
+    border: 1px solid rgb(206, 199, 209);
+    transition: background-color, color 0.2s linear;
+}
+
+.submenu__link:hover{
+    background-color: rgb(243, 240, 244); 
+    color: rgb(28, 19, 32);
+}
+
+.vertical-menu__item:hover > .vertical-menu__drawer.vertical-menu__drawer_transition_scaleY {
+    transition: transform 0.5s linear;
+    transform: scaleY(1);    
+}
+
+.vertical-menu__drawer.vertical-menu__drawer_transition_scaleY {
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.message {
+    padding: 12px;
+    border: 1px black solid;
+    border-radius: 3px;
+    color: #265559;
+    background-color: #e0f0f2;
+}
+
+.message_success {
+    color: #2f5926;
+    border-color: #2f5926;
+    background-color: #cfe8c9;
+}
+
+.message_warning {
+    color: #594826;
+    border-color: #594826;
+    background-color: #e8dec9;
+}
+
+.message_small {
+    font-size: 0.7em;
+}
