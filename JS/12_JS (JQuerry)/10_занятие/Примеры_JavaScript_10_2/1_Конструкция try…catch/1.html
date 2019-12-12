@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+<script>
+	let obj = {c:{b:2}};
+	
+	try {
+		alert("Начало блока try!");
+		console.log(obj.c.b);
+		alert("Конец блока try!");
+	} catch (e) {
+		alert("Обработка ошибки!");
+	}
+</script>
+</body>
+</html>

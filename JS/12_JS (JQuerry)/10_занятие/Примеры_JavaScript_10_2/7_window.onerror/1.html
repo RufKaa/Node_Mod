@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+<script>
+	window.onerror = function(message, url, lineNumber){
+		
+		console.log("Ошибка " + message + " " + url + " " + lineNumber);
+	}
+
+	function f(i){
+		return f(i+1);
+	}
+
+	f(1);
+	
+</script>
+</body>
+</html>

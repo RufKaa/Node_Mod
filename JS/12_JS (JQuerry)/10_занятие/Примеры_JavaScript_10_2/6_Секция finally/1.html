@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+<script>
+	let obj = {c:{b:2}};
+	
+	try {
+		alert("Начало блока try!");
+		if(obj.с != undefined) {
+			console.log(obj.с.b); //русская буква "с"
+		} else {
+			throw new Error("Нет объекта obj.с!");
+		}
+		alert("Конец блока try!");
+	} catch (e) {
+		if(e.name !== "Error")
+			throw e;
+		alert("Обработка ошибки: тип " + e.name + " описание " + e.message + " стек " +
+			e.stack);
+	} finally {
+		throw new Error("Нет объекта obj.с!");
+		alert("Сработает всегда");
+	}
+</script>
+</body>
+</html>

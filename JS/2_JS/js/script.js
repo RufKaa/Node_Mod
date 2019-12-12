@@ -85,7 +85,7 @@ switch(true) {
     case case_num === 1: // case_num === 1
         console.log(1);
         break;
-    case case_num === 2: // case_num === 2
+    case case_num === 2: // case_num === 2 || case_num === 3
     case case_num === 3:
         console.log('2 or 3');
         break;
