@@ -1,0 +1,91 @@
+<html>
+	<head>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <meta charset="utf-8">
+	</head>
+	<body>
+        <div id="app">
+            <header>
+                <h1>{{sitename}}</h1>
+                <div>
+                    <button v-on:click='showCheckout'>
+                        <span>{{ cartItemCount }} </span>Оформление заказа
+                    </button>
+                </div>
+            </header>
+            <main>
+                <div v-if='showProduct'>
+                    <div v-bind:data-id="product.id">
+                        <div>
+                            <figure>
+                                <img v-bind:src="product.image">
+                            </figure>
+                        </div>
+                        <div>
+                            <h1 v-text="product.title"></h1>
+                            <p v-html="product.description"></p>
+                            <p>Автор: {{product.author}}</p>
+                            <p>Издательство: {{product.publishing}}</p>
+                            <p>Год: {{product.year }}</p>
+                            <p>Колчнство страниц: {{product.pages }}</p>
+                            <p>Цена: {{product.price | formatPrice}}</p>
+                            <button v-on:click='addToCart' v-if='canAddCart'>Add to cart</button>
+                            <button v-on:click='addToCart' v-else disabled>Add to cart</button>
+                        </div>
+                    </div>
+            </div>
+            </main>
+        </div>        
+        <script>
+            let webStore = new Vue({
+                el:"#app",
+                data: {
+                    sitename: 'Магазин 404 - найдётся всё для IT-шников!',
+                    product:{
+                        id:1,
+                        title:'Как пасти котов. Наставление для программистов, руководящих другими программистами',
+                        description: '<em>«Как пасти котов»</em> — это книга о лидерстве и руководстве, о том, как первое совмещать со вторым.',
+                        author: 'Рейнвотер Дж. Ханк',
+                        publishing:'Питер',
+                        pages: 256,
+                        price: 418,
+                        year: 2019,
+                        image: 'https://cdn1.ozone.ru/multimedia/c1200/1024486505.jpg',
+                        avalibleInventory: 5,
+                    },
+                    cart: [],
+                    showProduct: true,
+                },
+                filters:{
+                    formatPrice: function(val){
+                        if(!val) return '';
+                        return val + " " + String.fromCharCode(8381);
+                    }
+                },
+                computed: {
+                    cartItemCount(){
+                        return String.fromCharCode('128722') + (this.cart.length || '');
+                    },
+                    canAddCart(){
+                        let id = this.product.id,
+                            itemCount = 0;
+                        for(let i = 0; i < this.cart.length; i++){
+                            if (this.cart[i] === id){
+                                itemCount++;
+                            }
+                        }
+                        return this.product.avalibleInventory > itemCount;
+                    }          
+                },
+                methods: {
+                    addToCart(){
+                        this.cart.push(this.product.id)
+                    },
+                    showCheckout(){
+                        this.showProduct = !this.showProduct;
+                    }
+                }
+            });
+        </script>
+   </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div v-on:contextmenu.prevent="onHelp">
+            <span>Вызови на мне контекстное меню</span>
+            <span v-show="visible"> Справочная информация</span>
+            <a v-show="visible" href="#" v-on:click.prevent="visible=false">Скрыть</a>
+        </div>
+    </div>
+    <script>
+        let app = new Vue({
+            el:'#app',
+            data:{
+                visible: false
+            },
+            methods:{
+                onHelp(){
+                    this.visible = true;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
