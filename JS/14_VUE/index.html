@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <button v-on:click="increase(3, $event)">+</button>
+        <button @click=";decrease(2, $event)">-</button>
+        <div>{{ counter }}</div>
+    </div>
+    <script>
+        let app = new Vue({
+            el:'#app',
+            data:{
+                counter: 0,
+                age: 18,
+            },
+            methods:{
+                increase:function(val, e){
+                    console.log(e);
+                    this.counter += val;
+                },
+                decrease(val, e){
+                    console.log(e);
+                    if(this.counter>0) 
+                        this.counter -= val;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
